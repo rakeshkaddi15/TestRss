@@ -5,44 +5,26 @@
     xmlns="http://purl.org/rss/1.0/">
 
   <channel rdf:about="https://example.com/rss">
-    <title>RSS Connector Reproduction Test</title>
+    <title>RSS Rights Test</title>
     <link>https://example.com</link>
-    <description>RSS feed for reproducing malformed item handling</description>
+    <description>Testing malformed dc:rights</description>
 
     <items>
       <rdf:Seq>
         <rdf:li rdf:resource="https://example.com/item1"/>
-        <rdf:li rdf:resource="https://example.com/item2"/>
-        <rdf:li rdf:resource="https://example.com/item3"/>
       </rdf:Seq>
     </items>
   </channel>
 
-  <!-- Item 1: VALID -->
   <item rdf:about="https://example.com/item1">
-    <title>Valid RSS Item 1</title>
+    <title>DC Rights Malformed Test</title>
     <link>https://example.com/item1</link>
-    <description>This is a valid RSS item before the malformed item.</description>
+    <description>Testing malformed dc:rights.</description>
     <dc:date>2026-09-24T10:00:00Z</dc:date>
-    <dc:creator>Valid Author One</dc:creator>
-  </item>
 
-  <!-- Item 2: INVALID - unescaped ampersand -->
-  <item rdf:about="https://example.com/item2">
-    <title>Invalid RSS Item 2</title>
-    <link>https://example.com/item2</link>
-    <description>This item contains malformed XML.</description>
-    <dc:date>2026-09-24T11:00:00Z</dc:date>
-    <dc:creator>Jean-Denis Garo, VP Global Marketing &amp; Communication Odigo</dc:creator>
-  </item>
+    <!-- INTENTIONALLY MALFORMED -->
+    <dc:rights>Copyright 2026 A & B</dc:rights>
 
-  <!-- Item 3: VALID -->
-  <item rdf:about="https://example.com/item3">
-    <title>Valid RSS Item 3</title>
-    <link>https://example.com/item3</link>
-    <description>This is a valid RSS item after the malformed item.</description>
-    <dc:date>2026-09-24T12:00:00Z</dc:date>
-    <dc:creator>Valid Author Three</dc:creator>
   </item>
 
 </rdf:RDF>

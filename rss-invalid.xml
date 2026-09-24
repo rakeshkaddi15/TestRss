@@ -33,7 +33,7 @@
     <link>https://example.com/item2</link>
     <description>This item contains malformed XML.</description>
     <dc:date>2026-09-24T11:00:00Z</dc:date>
-    <dc:creator>Jean-Denis Garo, VP Global Marketing & Communication Odigo</dc:creator>
+    <dc:creator>Jean-Denis Garo, VP Global Marketing &amp; Communication Odigo</dc:creator>
   </item>
 
   <!-- Item 3: VALID -->
